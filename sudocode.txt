@@ -21,4 +21,16 @@ I have to remember to remove the api files from github at some point
 
 Discord bot is working
 
-2 - 
+2 - Now I want to look at the messages.
+    if message is digit, take that integer and ping the api
+    return the json, turn into dict, print dict?
+
+    else, return
+
+
+
+I want to receicve the JSON file, take the data from it that I want/need, then make an ASCII table with it
+
+first I need to know what form the ascii input needs to be 
+    maybe this is 2D Python lists??? so then need to figure out how to get json to python lists
+then I wanna know how I can get json into that form
