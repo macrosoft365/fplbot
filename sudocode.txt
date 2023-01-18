@@ -16,4 +16,9 @@ We'll start there and see about expanding to anything else wrt functionality
 _____________________
 
 1 - Discord bot
-    
+
+I have to remember to remove the api files from github at some point
+
+Discord bot is working
+
+2 - 

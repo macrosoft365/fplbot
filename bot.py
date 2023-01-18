@@ -1,6 +1,8 @@
-# This example requires the 'message_content' intent.
-
 import discord
+import requests
+import json
+import pandas as pd
+import creds
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -17,6 +19,13 @@ async def on_message(message):
         return
 
     if message.content == 'update':
-        await message.channel.send('Here are the most recent updated mini league standings:')
+        await message.channel.send('What is your Mini League ID?')
 
-client.run('MTA2NTEyODkxODIzNzA2NTI1OA.GDt07n.01itLlJCgReAbw7dcRnyr8vp24PxHFTtQTxo2E')
+    if message.content.isdigit():
+        id = str(message.content)
+        response = requests.get(f'https://fantasy.premierleague.com/api/leagues-classic/{id}/standings/?page_standings=1')
+        parsed = response.json()
+        print(parsed)   
+        await message.channel.send(f'Here are the most recent standings for your league: ')
+        
+client.run(creds.token)
