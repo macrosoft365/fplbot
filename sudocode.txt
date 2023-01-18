@@ -1,0 +1,19 @@
+Hi! This is the README for this discord bot that I am working on.
+
+I need to figure this out in a few different parts.
+
+The first is that I want to get a simple discord bot up and running.
+
+Once I have that working as expected, I will work on connecting to the FPL API so that we can start to integrate functionality into the bot
+
+Ideally, I'd like for you to be able to put in your league id and have the bot go and grab the most updated standings
+
+I want these standins to have names, team names, current week points, overall points, and players left, and in play.
+basically anything that shows on the FLP Gameweek page
+
+We'll start there and see about expanding to anything else wrt functionality
+
+_____________________
+
+1 - Discord bot
+    
