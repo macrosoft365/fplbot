@@ -1,8 +1,5 @@
-import discord
-import requests
-import json
+import discord, requests, json, creds
 import pandas as pd
-import creds
 
 intents = discord.Intents.default()
 intents.message_content = True
