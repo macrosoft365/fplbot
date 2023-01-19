@@ -25,6 +25,6 @@ async def on_message(message):
         results = standings['results']
         await message.channel.send('Here are the most recent standings for your mini league: \n')
         for index in range(len(results)):
-            team = ("#" + str(results[index]['rank']) + " " + results[index]['player_name'] + " aka " + results[index]['entry_name'] + " with " + str(results[index]['total']) + " points")
+            team = ("#" + str(results[index]['rank']) + " " + results[index]['player_name'] + "'s '" + results[index]['entry_name'] + "' with " + str(results[index]['total']) + " points")
             await message.channel.send(f'{team}')
 client.run(creds.token)
