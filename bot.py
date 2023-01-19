@@ -23,7 +23,9 @@ async def on_message(message):
         parsed = response.json()
         standings = parsed['standings']
         results = standings['results']
-        await message.channel.send('Here are the most recent standings for your mini league: \n')
+        league = parsed['league']
+        league_name = league['name']
+        await message.channel.send(f'Here are the most recent standings for {league_name}: \n')
         for index in range(len(results)):
             team = ("#" + str(results[index]['rank']) + " " + results[index]['player_name'] + "'s '" + results[index]['entry_name'] + "' with " + str(results[index]['total']) + " points")
             await message.channel.send(f'{team}')
