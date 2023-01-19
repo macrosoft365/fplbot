@@ -34,3 +34,17 @@ I want to receicve the JSON file, take the data from it that I want/need, then m
 first I need to know what form the ascii input needs to be 
     maybe this is 2D Python lists??? so then need to figure out how to get json to python lists
 then I wanna know how I can get json into that form
+
+
+currrently the json is in a class dict, looks like i need to get it to a list?
+
+for the number of dicts in a list, iterate over the list and grab the dict data
+
+i need to make a list for each player in the league
+rn i am making a list for all of the players, I wanna turn each list into a row on the table
+
+
+
+OMG I did it!!!! WOOOOOO not exactly the smoothest or fastest implementation, but we got there!
+
+next up would be speedning it up and having it be live all the time
