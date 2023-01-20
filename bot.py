@@ -28,7 +28,7 @@ async def on_message(message):
     
     #if bot is asked for help
     if message.content == 'help':
-        await message.channel.send('- type "info" for more info about this bot\n- type "update" to prompt the bot to ask you for your Mini League ID')
+        await message.channel.send('- type "info" for more info about this bot\n- type your Mini League ID to get the most recent standings for your league')
 
     if message.content == 'info':
         await message.channel.send('This bot allows for discord users to ping the FPL API to check the most recent standings in their Mini League of choice')    
