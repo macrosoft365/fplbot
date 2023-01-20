@@ -36,13 +36,9 @@ async def on_message(message):
     #if bot gets digit, basically searches for mini league and prints standings in discord messages
     if message.content.isdigit():
         id = str(message.content)
-        response = requests.get(f'https://fantasy.premierleague.com/api/leagues-classic/{id}/standings/?page_standings=1')
-        parsed = response.json()
-        standings = parsed['standings']
-        results = standings['results']
-
-        league = parsed['league']
-        league_name = league['name']
+        response = requests.get(f'https://fantasy.premierleague.com/api/leagues-classic/{id}/standings/?page_standings=1').json()
+        results = response['standings']['results']
+        league_name = response['league']['name']
 
         #this is where we send the messages
         await message.channel.send(f'Here are the most recent standings for {league_name}: \n')
