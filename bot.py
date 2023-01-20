@@ -1,5 +1,5 @@
 #import necessary libraries
-import discord, requests, creds
+import discord, requests, creds, logging
 
 #candidly not sure what these do, but taken from documentation
 intents = discord.Intents.default()
@@ -8,10 +8,13 @@ intents.message_content = True
 #same as above
 client = discord.Client(intents=intents)
 
+handler = logging.FileHandler(filename='fplbot.log', encoding='utf-8', mode='w')
+
 #on ready, prints that we have logged in as the bot. Help prompt will only work on my personal server
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
+    #this next command only works on my private server
     channel = client.get_channel(1065342425540866099)
     await channel.send('Type "help" for instructions')
 
@@ -49,4 +52,4 @@ async def on_message(message):
             total = str(results[index]['total'])
             await message.channel.send(f"#{rank} {player_name}'s '{entry_name}' with {total} points")
 
-client.run(creds.token)
+client.run(creds.token, log_handler=handler)
